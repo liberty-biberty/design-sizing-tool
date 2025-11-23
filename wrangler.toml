@@ -4,3 +4,11 @@ compatibility_date = "2024-11-21"
 
 [site]
 bucket = "./dist"
+
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = false
+head_sampling_rate = 1
+invocation_logs = true
