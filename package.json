@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp worker.js dist/_worker.js && cp .assetsignore dist/.assetsignore",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler pages deploy dist",
+    "deploy": "npm run build && wrangler deploy",
     "pages:dev": "wrangler pages dev dist"
   },
   "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.4.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
